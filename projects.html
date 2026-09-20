@@ -20,6 +20,26 @@
         font-size: 16px;
     }
 </style>
+     <style>
+.falling-image {
+    position: fixed;
+    top: -100px;
+    width: 50px;
+    animation: fall 6s linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes fall {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 100vh;
+    }
+}
+</style>
 </head>
 
 <body>
