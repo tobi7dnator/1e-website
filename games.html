@@ -61,11 +61,11 @@
   <div class="content">
     <img src="dsp.png" width="500">
     <p>Dyson Sphere Program</p>
-    <img src="astroneer.png">
+    <img src="astroneer.png" width="500">
     <p>Astroneer</p>
     <img src="satisfactory.png" width="500">
     <p>Satisfactory</p>
-    <img src="civ6.png">
+    <img src="civ6.png" width="500">
     <p>Sid Meier's Civ 6</p>
 </div>
 
@@ -76,7 +76,7 @@ function createImage() {
     const image = document.createElement("img");
 
     const images = ["dsp logo.png", "satisfactory cup.png", "compound.png", "civ6 oil.png"];
-    image.src = images[Math.floor(Math.random() * images.length)] width="500";
+    image.src = images[Math.floor(Math.random() * images.length)];
     image.className = "falling-image";
     image.style.left = Math.random() * 100 + "vw";
 
