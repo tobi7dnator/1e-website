@@ -22,6 +22,26 @@
         font-size: 16px;
     }
 </style>
+    <style>
+.falling-image {
+    position: fixed;
+    top: -100px;
+    width: 50px;
+    animation: fall 6s linear;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes fall {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 100vh;
+    }
+}
+</style>
 </head>
 
 <body>
@@ -31,8 +51,27 @@
        <nav>
            <a href="projects.html">klik hier voor mijn hobbies</a>
        </nav> 
+<script>
+function createImage() {
+    const image = document.createElement("img");
 
-  
+    image.src = "pizza.png";
+    image.className = "falling-image";
+    image.style.left = Math.random() * 100 + "vw";
+
+    document.body.appendChild(image);
+
+    setTimeout(() => {
+        image.remove();
+    }, 6000);
+}
+
+for (let i = 0; i < 5; i++) {
+    setTimeout(createImage, i * 500);
+}
+
+setInterval(createImage, 1000);
+</script>
 
 </body>
 </html>
