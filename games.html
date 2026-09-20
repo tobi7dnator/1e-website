@@ -76,7 +76,7 @@ function createImage() {
     const image = document.createElement("img");
 
     const images = ["dsp logo.png", "satisfactory cup.png", "compound.png", "civ6 oil.png"];
-    image.src = images[Math.floor(Math.random() * images.length)];
+    image.src = images[Math.floor(Math.random() * images.length)] width="500";
     image.className = "falling-image";
     image.style.left = Math.random() * 100 + "vw";
 
